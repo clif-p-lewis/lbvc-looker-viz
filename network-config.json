@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": "graph",
+      "label": "Graph",
+      "elements": [
+        {
+          "type": "DIMENSION",
+          "id": "src",
+          "label": "Source node (ID/Name)",
+          "options": { "min": 1, "max": 1, "supportedTypes": ["DEFAULT"] }
+        },
+        {
+          "type": "DIMENSION",
+          "id": "dst",
+          "label": "Target node (ID/Name)",
+          "options": { "min": 1, "max": 1, "supportedTypes": ["DEFAULT"] }
+        },
+        {
+          "type": "DIMENSION",
+          "id": "nodeGroup",
+          "label": "Node group (optional, categorical)",
+          "options": { "min": 0, "max": 1, "supportedTypes": ["DEFAULT"] }
+        },
+        {
+          "type": "METRIC",
+          "id": "nodeSize",
+          "label": "Node size metric (optional)",
+          "options": { "min": 0, "max": 1 }
+        },
+        {
+          "type": "METRIC",
+          "id": "nodeColor",
+          "label": "Node color metric (optional)",
+          "options": { "min": 0, "max": 1 }
+        },
+        {
+          "type": "METRIC",
+          "id": "edgeWeight",
+          "label": "Edge thickness metric (optional)",
+          "options": { "min": 0, "max": 1 }
+        },
+        {
+          "type": "METRIC",
+          "id": "edgeColor",
+          "label": "Edge color metric (optional)",
+          "options": { "min": 0, "max": 1 }
+        },
+        {
+          "type": "MAX_RESULTS",
+          "id": "maxRows",
+          "label": "Max rows",
+          "options": { "max": 5000 }
+        }
+      ]
+    }
+  ],
+  "style": [
+    {
+      "id": "graphStyle",
+      "label": "Graph Style",
+      "elements": [
+        { "type": "FILL_COLOR", "id": "defaultNodeFill", "label": "Default node color", "defaultValue": { "color": "#4e79a7" } },
+        { "type": "FILL_COLOR", "id": "defaultLinkColor", "label": "Default link color", "defaultValue": { "color": "#999999" } },
+        { "type": "LINE_WEIGHT", "id": "defaultLinkWidth", "label": "Default link width", "defaultValue": 1 },
+        { "type": "INTERVAL", "id": "chargeStrength", "label": "Charge strength", "defaultValue": -50, "options": { "min": -300, "max": 0 } },
+        { "type": "INTERVAL", "id": "linkDistance", "label": "Link distance", "defaultValue": 50, "options": { "min": 10, "max": 300 } },
+        { "type": "INTERVAL", "id": "nodeMinSize", "label": "Node size min (px)", "defaultValue": 4, "options": { "min": 1, "max": 100 } },
+        { "type": "INTERVAL", "id": "nodeMaxSize", "label": "Node size max (px)", "defaultValue": 24, "options": { "min": 4, "max": 100 } },
+        { "type": "CHECKBOX", "id": "showLabels", "label": "Show labels", "defaultValue": true }
+      ]
+    }
+  ],
+  "features": {
+    "enableComparisonDateRange": false
+  }
+}
